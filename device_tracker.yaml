@@ -1,0 +1,31 @@
+- platform: nmap_tracker
+  hosts: 192.168.1.1/24
+  track_new_devices: yes
+  consider_home: 1000
+  exclude:
+#TP-Link router
+    - 192.168.1.1
+#DIR-655 Access point
+    - 192.168.1.2
+#Goliath Desktop PC
+    - 192.168.1.50
+#receiver
+    - 192.168.1.50
+#DCS-5020L camera (Living room)
+    - 192.168.1.50
+#Raspberry PI
+    - 192.168.1.110
+#  scan_options: " --privileged -sP "
+# consider_home - Added to known_devices.yaml instead on a device by device basis.
+- platform: owntracks
+#  max_gps_accuracy: 200
+#  waypoints: true
+  mqtt_topic: "owntracks/#"
+#  events_only: true
+#  waypoint_whitelist:
+#    - jon
+#    - ram
+#  region_mapping:
+#    cabin: home
+#    office: work
+#

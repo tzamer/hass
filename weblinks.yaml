@@ -1,0 +1,7 @@
+  entities:
+    - name: Router
+      url: http://192.168.1.1/
+    - name: Home Assistant
+      url: https://192.168.1.110:8123
+    - name: NodeRed
+      url: https://192.168.1.110:1880

@@ -1,0 +1,45 @@
+  - platform: miflora
+    mac: !secret miflora_mac
+    name: 'bamboo'
+    monitored_conditions:
+      - temperature
+      - moisture
+      - conductivity
+      - battery
+      - light
+    median: 1
+  - platform: yr
+# Weather prediction
+  - platform: darksky
+    api_key: !secret darksky_apikey
+    monitored_conditions:
+      - summary
+      - icon
+      - apparent_temperature
+      - temperature
+      - precip_type
+      - wind_speed
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - temperature_max
+      - temperature_min
+      - uv_index
+    update_interval:
+      # At least one of these must be specified:
+      days: 0
+      hours: 0
+      minutes: 30
+      seconds: 0
+      milliseconds: 0
+# MQTT values
+  - platform: mqtt
+    state_topic: "owntracks/Panagiotis/tzam_s8"
+    name: "Panagiotis battery"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.batt }}'
+  - platform: mqtt
+    state_topic: "owntracks/Panagiotis/tab"
+    name: "Tablet battery"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.batt }}'

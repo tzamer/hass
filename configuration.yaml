@@ -1,0 +1,115 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret hass_latitude
+  longitude: !secret hass_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret hass_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Athens
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and front-end
+#introduction:
+
+# Enables the front-end
+frontend:
+
+# HBMQTT Broker
+# Host	localhost
+# Port	1883
+# Protocol	3.1.1
+# User	homeassistant
+# Password	Your API password
+# Websocket port	8080
+mqtt:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  base_url: !secret http_baseurl
+  ssl_certificate: !secret https_certificate
+  ssl_key: !secret https_key
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the front-end in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+light:
+  - platform: lifx
+  
+media_player:
+# https://home-assistant.io/components/media_player.cast/
+  - platform: cast
+# https://home-assistant.io/components/media_player.yamaha/
+  - platform: yamaha
+# https://home-assistant.io/components/media_player.spotify/
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
+#    aliases:
+#        abc123def456: 'Living Room'
+#        9183abas000: 'Bed Room'
+
+# Track mobile devices
+device_tracker: !include device_tracker.yaml
+
+# Mobile notifications
+notify: !include notify.yaml
+
+# Personal web links
+weblink: !include weblinks.yaml
+
+# Web cameras
+camera: !include cameras.yaml
+
+# Shopping list
+shopping_list: !include shoplist.yaml
+
+# Text to speech
+tts:
+  - platform: google
+
+# DuckDNS 
+# Replaced by HASS.IO addon
+#duckdns:
+#  domain: tzam
+#  access_token: !secret duckdns_token
+
+# Cloud
+cloud:
+
+sensor: !include sensors.yaml
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

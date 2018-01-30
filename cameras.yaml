@@ -1,0 +1,10 @@
+  - platform: generic
+    name: Kitchen
+    still_image_url: http://192.168.1.90/image/jpeg.cgi
+    username: !secret camera_kitchen_username
+    password: !secret camera_kitchen_password
+  - platform: generic
+    name: Office
+    still_image_url: http://192.168.1.91/image/jpeg.cgi
+    username: !secret camera_office_username
+    password: !secret camera_office_password

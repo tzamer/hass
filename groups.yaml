@@ -1,0 +1,89 @@
+# SECURITY
+  security_view:
+    view: yes
+    icon: mdi:security-home 
+    entities:
+      - group.security
+  security:
+    name: Security
+    entities:
+      - camera.kitchen
+      - camera.office
+# LIGHTS
+  light_view:
+    view: yes
+    icon: mdi:lamp 
+    entities:
+      - group.lamps
+  lamps:
+    name: Lighting
+    entities:
+      - light.hallway
+      - light.office
+      - light.saloni1
+# LINK
+  links_view:
+    view: yes
+    icon: mdi:link 
+    entities:
+      - group.external_links
+      - group.internal_links
+  external_links:
+    name: External links
+    entities:
+      - weblink.nodered
+      - weblink.home_assistant
+  internal_links:
+    name: Internal links
+    entities:
+      - weblink.router
+# PLANTS
+  plants_view:
+    view: yes
+    icon: mdi:flower
+    entities:
+      - group.flowers
+  flowers:
+    name: Bamboo
+    entities:
+      - sensor.bamboo_battery
+      - sensor.bamboo_conductivity
+      - sensor.bamboo_moisture
+      - sensor.bamboo_temperature
+      - sensor.bamboo_light_intensity
+# WEATHER - SUN
+  weather_view:
+    view: yes
+    icon: mdi:weather-partlycloudy
+    entities:
+      - group.weather
+      - group.temperature
+      - group.sun
+      - group.darksky
+  weather:
+    name: Weather
+    entities:
+      - sensor.yr_symbol
+  temperature:
+    name: Temperature
+    entities:
+      - sensor.bamboo_temperature
+  sun:
+    name: Sun
+    entities:
+      - sun.sun
+  darksky:
+    name: Weather (Darksky)
+    entities:
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_precip_type
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_cloud_cover
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_temperature_max
+      - sensor.dark_sky_temperature_min
+      - sensor.dark_sky_uv_index

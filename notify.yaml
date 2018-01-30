@@ -1,0 +1,9 @@
+  - name: pushover
+    platform: pushover
+    api_key: !secret pushover_apikey
+    user_key: !secret pushover_userkey
+#https://home-assistant.io/components/notify.pushover/
+#  - name: device_notification
+#    platform: html5
+#    gcm_api_key: !secret html5_gcmapikey
+#    gcm_sender_id: !secret html5_senderid
