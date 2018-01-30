@@ -1,0 +1,10 @@
+  bamboo:
+    sensors:
+      moisture: sensor.bamboo_moisture
+      battery: sensor.bamboo_battery
+      temperature: sensor.bamboo_temperature
+      conductivity: sensor.bamboo_conductivity
+      brightness: sensor.bamboo_light_intensity
+    min_moisture: 25
+    min_conductivity: 65
+    min_battery: 5

@@ -16,6 +16,14 @@ homeassistant:
 # Show links to resources in log and front-end
 #introduction:
 
+######### Developer Notes ###########
+# YAML debugger:
+# http://www.yamllint.com/
+# GitHub commit:
+# https://home-assistant.io/docs/ecosystem/backup/backup_github/
+# git remote add origin https://github.com/tzamer/hass.git
+# git push -u origin master
+
 # Enables the front-end
 frontend:
 
@@ -113,3 +121,4 @@ sensor: !include sensors.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+plant: !include plants.yaml
