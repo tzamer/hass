@@ -1,0 +1,29 @@
+  - name: Gym
+    latitude: !secret gym_latitude
+    longitude: !secret gym_longitude
+    radius: 250
+    icon: mdi:weight-kilogram
+
+  - name: Work
+    latitude: !secret work_latitude
+    longitude: !secret work_longitude
+    radius: 200
+    icon: mdi:briefcase
+
+  - name: Parents
+    latitude: !secret parents_latitude
+    longitude: !secret parents_longitude
+    radius: 200
+    icon: mdi:briefcase
+    
+  # This will override the default home zone
+  - name: Home
+    latitude: !secret hass_latitude
+    longitude: !secret hass_longitude
+    radius: 150
+    icon: mdi:home-variant
+    
+    
+    
+    
+    

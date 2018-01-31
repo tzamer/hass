@@ -122,3 +122,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 plant: !include plants.yaml
+zone: !include zones.yaml

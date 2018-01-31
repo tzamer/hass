@@ -5,6 +5,8 @@
       temperature: sensor.bamboo_temperature
       conductivity: sensor.bamboo_conductivity
       brightness: sensor.bamboo_light_intensity
-    min_moisture: 25
-    min_conductivity: 65
+    min_moisture: 20
+    max_moisture: 60
+    min_conductivity: 500
+    max_conductivity: 3000
     min_battery: 5
