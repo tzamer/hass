@@ -135,7 +135,7 @@ emoncms_history:
 sensor: !include sensors.yaml
 
 group: !include groups.yaml
-automation: !include automations.yaml
 script: !include scripts.yaml
 plant: !include plants.yaml
 zone: !include zones.yaml
+automation: !include_dir_merge_list automation
