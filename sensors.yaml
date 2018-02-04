@@ -1,5 +1,5 @@
   - platform: miflora
-    mac: !secret miflora_mac
+    mac: !secret miflora_mac2
     name: 'bamboo'
     monitored_conditions:
       - temperature

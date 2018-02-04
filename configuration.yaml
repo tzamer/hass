@@ -27,6 +27,15 @@ homeassistant:
 # Enables the front-end
 frontend:
 
+# https://home-assistant.io/components/logger/
+logger:
+  default: warning
+  
+# https://home-assistant.io/components/recorder/
+recorder:
+  purge_interval: 1
+  purge_keep_days: 10
+
 # HBMQTT Broker
 # Host	localhost
 # Port	1883
@@ -115,6 +124,13 @@ tts:
 
 # Cloud
 cloud:
+
+emoncms_history:
+  api_key: !secret emoncms_api
+  url: https://emoncms.org
+  inputnode: 1
+  whitelist:
+    - device_tracker.panagiotis_tzam_s8
 
 sensor: !include sensors.yaml
 
